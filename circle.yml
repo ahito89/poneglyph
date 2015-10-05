@@ -13,11 +13,4 @@ deployment:
     commands:
       - git clone git@github.com:ahito89/poneglyph.git
       - cd poneglyph
-      - rm -rf public
-      - git submodule add -f git@github.com:ahito89/ahito89.github.io.git public
-
-      - hugo
-      - cd public/
-      - git add .
-      - git commit -m "Update (`date '+%F %T %Z'`) [ci skip]"
-      - git push origin master
+      - bash deploy.sh
