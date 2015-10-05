@@ -16,7 +16,8 @@ deployment:
     branch: master
     commands:
       - git clone git@github.com:ahito89/poneglyph.git 
-      - cd poneglyph 
+      - cd poneglyph
+      - cd public/ && git checkout master
       - hugo
       - cd public/
       - git add .
