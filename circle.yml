@@ -1,10 +1,6 @@
 machine:
  timezone: Europe/Bucharest
 
-checkout:
-  post:
-    - git submodule update --init --recursive
-
 dependencies:
   pre:
     - go get -v github.com/spf13/hugo
@@ -15,9 +11,11 @@ deployment:
   master:
     branch: master
     commands:
-      - git clone git@github.com:ahito89/poneglyph.git 
+      - git clone git@github.com:ahito89/poneglyph.git
       - cd poneglyph
-      - cd public/ && git checkout master
+      - rm -rf public
+      - git submodule add git@github.com:ahito89/ahito89.github.io.git public
+
       - hugo
       - cd public/
       - git add .
