@@ -16,7 +16,9 @@ deployment:
     branch: master
     commands:
       - git clone git@github.com:ahito89/poneglyph.git 
-      - cd poneglyph && hugo
-      - cd poneglyph/public && git add .
-      - cd poneglyph/public && git commit -m "Update (`date '+%F %T %Z'`) [ci skip]"
-      - cd poneglyph/public && git push origin master
+      - cd poneglyph 
+      - hugo
+      - cd public/
+      - git add .
+      - git commit -m "Update (`date '+%F %T %Z'`) [ci skip]"
+      - git push origin master
