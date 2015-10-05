@@ -4,7 +4,7 @@ machine:
 checkout:
  post:
     - git submodule init
-    - git submodule updatet
+    - git submodule update
     - cd public/ && git checkout master
 dependencies:
   pre:
