@@ -18,6 +18,9 @@ deployment:
       - ls
       - hugo
       - ls
+      - git status
+      - cd poneglyph/ && ls && git status
+      - cd public/ && git status
       - cd public/ && ls && git add .
       - ls
       - cd public/ && git status
