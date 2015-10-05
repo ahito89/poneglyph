@@ -1,0 +1,19 @@
+baseurl = "http://poneglyph.net/"
+languageCode = "en-us"
+title = "poneglyph"
+author = "dif"
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+builddrafts = false
+canonifyurls = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  copyright = "poneglyph All rights reserved."
+  analytics = "UA-49988826-1"
+[permalinks]
+  post = "/:year/:month/:day/:slug"
