@@ -15,7 +15,7 @@ deployment:
   master:
     branch: master
     commands:
-      - git clone git@github.com:ahito89/ahito89.github.io.git public
+      - git clone git@github.com:ahito89/poneglyph.git 
       - hugo
       - cd public && git add .
       - cd public && git commit -m "Update (`date '+%F %T %Z'`) [ci skip]"
