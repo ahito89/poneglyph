@@ -14,5 +14,6 @@ deployment:
   master:
     branch: master
     commands:
+      - git clone git@github.com:ahito89/ahito89.github.io.git public
       - hugo
-      - ls && git status && cd public/ && ls && git status
+      - cd public && git add . && git status
