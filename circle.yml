@@ -16,14 +16,3 @@ deployment:
     commands:
       - git clone git@github.com:ahito89/poneglyph.git
       - ls
-      - hugo
-      - ls
-      - git status
-      - cd poneglyph/ && ls && git status
-      - cd public/ && git status
-      - cd public/ && ls && git add .
-      - ls
-      - cd public/ && git status
-      - ls
-      - cd public/ && git commit -m "Update (`date '+%F %T %Z'`) [ci skip]"
-      - cd public/ && git push origin master
