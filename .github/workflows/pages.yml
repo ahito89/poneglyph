@@ -31,3 +31,4 @@ jobs:
           publish_dir: ./public
           user_name: Ionut Duma
           user_email: ionutduma@hotmail.com
+          keep_files: true
