@@ -1,21 +1,20 @@
 {{ partial "header.html" . }}
 
-	<main role="main">
-		<h1 class="list-title">Latest Posts</h1>
-    	<ul class="list-entry">
-{{ range first 12 .Data.Pages }}
-			<li itemscope itemtype="http://schema.org/Blog">
-				<a href="{{ .RelPermalink }}">
-					<h2 class="entry-title" itemprop="headline">{{ .Title }}{{ if .Draft }} #Draft{{ end }}</h2>
-					<span class="entry-meta"><time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></span>
-				</a>
-			</li>
-{{ end }}
-		</ul>
-		<div class="view-more-posts">
-      		<div class="more"><a href="/post/">View more posts</a></div>
-      		<small>{{ len .Data.Pages}} posts since '15</small>
-    	</div>
-	</main>
+<main role="main">
+	<h1 class="list-title">Latest Posts</h1>
+	<ul class="list-entry">
+		{{ range (.Paginator 16).Pages }}
+		{{ .Render "summary"}}
+		{{ end }}
+	</ul>
+	<nav class="entry-paginator">
+		{{ if .Paginator.HasPrev }}
+		<a class="prev" rel="prev" href="{{.Paginator.Prev.URL}}">← Newer</a>
+		{{ end }}
+		{{ if .Paginator.HasNext }}
+		<a class="next" rel="next" href="{{.Paginator.Next.URL}}">Older →</a>
+		{{ end }}
+	</nav>
+</main>
 
 {{ partial "footer.html" . }}
