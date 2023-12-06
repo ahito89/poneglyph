@@ -144,11 +144,6 @@ main h1{
 
 footer {
   margin: 4rem 0;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  margin-bottom: 0px;
   text-align: center;
 }
 
